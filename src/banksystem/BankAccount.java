@@ -4,9 +4,9 @@ package banksystem;
 import javax.swing.JOptionPane;
 
 public class BankAccount {
-        protected double balance;
+    protected double balance;
     protected int ID;
-    
+    Client client;
     
     public BankAccount() {
         this.balance = 0.0;
@@ -32,6 +32,15 @@ public class BankAccount {
     public void setID(int ID) {
         this.ID = ID;
     }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+    
     
     public boolean withraw(double withdraw){
         if (withdraw <= 0 || withdraw > balance ) {
